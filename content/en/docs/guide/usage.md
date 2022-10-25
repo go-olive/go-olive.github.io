@@ -51,3 +51,15 @@ olive run -f /path/to/config.toml
 ```
 
 > /path/to/config.toml 指的是`config.toml`配置文件的绝对路径
+
+## 帮助功能
+
+如果有任何不懂得命令，都可以执行`help`命令获得帮助，🌰 如下
+
+```sh
+olive help
+```
+
+```sh
+olive help run
+```
