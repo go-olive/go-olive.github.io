@@ -42,6 +42,8 @@ olive run -u https://www.huya.com/518512
 
 ## 进阶使用
 
+### 命令行版本
+
 通过使用配置文件启动 **olive** , 该文件为您提供了更多的选项。
 
 模板文件参考: [config.toml](https://github.com/go-olive/olive/blob/main/zarf/tmpl/config.toml)
@@ -51,6 +53,31 @@ olive run -f /path/to/config.toml
 ```
 
 > /path/to/config.toml 指的是`config.toml`配置文件的绝对路径
+
+### docker版本
+
+docker-compose.yaml 例子如下：
+
+```yaml
+version: "3.8"
+
+services:
+  olive:
+    image: luxcgo/olive:latest
+    container_name: olive-run
+    command:
+      [
+        "./olive",
+        "run",
+        "-f",
+        "/config/config.toml",
+      ]
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+      - ./downloads:/downloads:Z
+      - ./config:/config:Z
+```
 
 ## 帮助功能
 
