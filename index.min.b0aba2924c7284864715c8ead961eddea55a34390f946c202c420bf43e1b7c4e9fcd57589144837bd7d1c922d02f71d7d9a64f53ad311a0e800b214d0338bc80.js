@@ -6,19 +6,20 @@ var suggestions=document.getElementById("suggestions"),search=document.getElemen
 go install github.com/go-olive/olive@latest 二进制安装
 docker 镜像
 docker pull luxcgo/olive@latest 快速开始 # 只需要传入直播间网址就可以让 olive 开始工作。
-olive run -u https://www.huya.com/518512 进阶使用 # 通过使用配置文件启动 olive , 该文件为您提供了更多的选项。
+olive run -u https://www.huya.com/518512 进阶使用 # 命令行版本 # 通过使用配置文件启动 olive , 该文件为您提供了更多的选项。
 模板文件参考: config.toml
 olive run -f /path/to/config.toml /path/to/config.toml 指的是config.toml配置文件的绝对路径
-帮助功能 # 如果有任何不懂得命令，都可以执行help命令获得帮助，🌰 如下
-olive help olive help run `,content:`安装部署 # 您可以通过以下 3 种方式中的任意一种来安装 olive：
+docker版本 # docker-compose.yaml 例子如下：
+version: \u0026quot;3.8\u0026quot; services: olive: image: luxcgo/olive:latest container_name: olive-run command: [ \u0026quot;./olive\u0026quot;, \u0026quot;run\u0026quot;, \u0026quot;-f\u0026quot;, \u0026quot;/config/config.toml\u0026quot;, ] volumes: - \u0026quot;/etc/timezone:/etc/timezone:ro\u0026quot; - \u0026quot;/etc/localtime:/etc/localtime:ro\u0026quot; - ./downloads:/downloads:Z - ./config:/config:Z 帮助功能 # 如果有任何不懂得命令，都可以执行help命令获得帮助，🌰 如下`,content:`安装部署 # 您可以通过以下 3 种方式中的任意一种来安装 olive：
 源码安装
 go install github.com/go-olive/olive@latest 二进制安装
 docker 镜像
 docker pull luxcgo/olive@latest 快速开始 # 只需要传入直播间网址就可以让 olive 开始工作。
-olive run -u https://www.huya.com/518512 进阶使用 # 通过使用配置文件启动 olive , 该文件为您提供了更多的选项。
+olive run -u https://www.huya.com/518512 进阶使用 # 命令行版本 # 通过使用配置文件启动 olive , 该文件为您提供了更多的选项。
 模板文件参考: config.toml
 olive run -f /path/to/config.toml /path/to/config.toml 指的是config.toml配置文件的绝对路径
-帮助功能 # 如果有任何不懂得命令，都可以执行help命令获得帮助，🌰 如下
+docker版本 # docker-compose.yaml 例子如下：
+version: \u0026quot;3.8\u0026quot; services: olive: image: luxcgo/olive:latest container_name: olive-run command: [ \u0026quot;./olive\u0026quot;, \u0026quot;run\u0026quot;, \u0026quot;-f\u0026quot;, \u0026quot;/config/config.toml\u0026quot;, ] volumes: - \u0026quot;/etc/timezone:/etc/timezone:ro\u0026quot; - \u0026quot;/etc/localtime:/etc/localtime:ro\u0026quot; - ./downloads:/downloads:Z - ./config:/config:Z 帮助功能 # 如果有任何不懂得命令，都可以执行help命令获得帮助，🌰 如下
 olive help olive help run `}),e.add({id:2,href:"/docs/guide/web/",title:"网页端",description:`demo 网站：只作为样例演示，请务必不要修改账号密码
 除了以后端服务的方式运行，您还可以部署网页端的服务。
 该服务已打包成docker 镜像
