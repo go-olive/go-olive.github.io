@@ -20,7 +20,7 @@ toc: true
 
 该服务已打包成`docker 镜像`
 
-```
+```sh
 # 保存以下内容为本地文件，文件名`docker-compose.yaml`
 # 并执行以下命令
 docker-compose up -d olive-db
@@ -28,7 +28,7 @@ docker-compose up -d olive-server
 docker-compose up -d olive-portal
 ```
 
-```
+```yaml
 version: "3.8"
 
 services:
