@@ -1,1 +1,2 @@
-canonifyURLs = false
+baseurl = "https://go-olive.github.io/"
+canonifyURLs = true
