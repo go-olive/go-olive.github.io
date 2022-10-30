@@ -63,7 +63,7 @@ services:
         "-l",
         "/downloads",
         "-s",
-        "/downloads"
+        "/downloads",
       ]
     volumes:
       - "/etc/timezone:/etc/timezone:ro"
@@ -80,8 +80,8 @@ services:
       - olive-server
     ports:
       - "8080:8080"
-    volumes:
-      - ./config/default.conf:/etc/nginx/conf.d/default.conf
+    # volumes:
+    #   - ./config/default.conf:/etc/nginx/conf.d/default.conf
     networks:
       - olive-network
 
